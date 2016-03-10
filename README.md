@@ -1,2 +1,2 @@
 # CryptoRSA
-Filipovich Vadzim,553502
+Vadzim Filipovich,553502
