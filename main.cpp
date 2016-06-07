@@ -197,6 +197,9 @@ void encrypt(char fin_path[], char fout_path[], char public_path[])
 {
     ifstream public_file(public_path,ios_base::in | ios_base::binary);
     mpz_t e , n;
+   // mpz_inits(e , n);
+    mpz_init_set_ui(e,0);
+    mpz_init_set_ui(n,0);
     char buff_e[15000], buff_n[15000], test[15000];
 
     public_file >> buff_e;
@@ -294,6 +297,9 @@ void decrypt(char fin_path[], char fout_path[], char private_path[])
 
   ifstream private_file(private_path,ios_base::in | ios_base::binary);
   mpz_t  d , n;
+  mpz_init_set_ui(d,0);
+  mpz_init_set_ui(n,0);
+
   char buff_d[10000], buff_n[10000];
   private_file >> buff_d;
   //cout << buff_d << endl;
